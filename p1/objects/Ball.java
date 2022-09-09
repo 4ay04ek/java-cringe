@@ -64,6 +64,8 @@ public class Ball {
     public int getWeight(){
         return this.weight;
     }
+
+    @Override
     public String toString(){
         return String.format("Ball { Type: %s, Diameter: %dsm, Weight: %dg }", this.t.toString(), this.diameter, this.weight);
     }
