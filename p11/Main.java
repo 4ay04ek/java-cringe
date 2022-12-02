@@ -1,9 +1,14 @@
+import java.util.Scanner;
+
 import objects.*;
 
 public class Main{ 
     public static void main (String args[]){
-        for (int i = 1; i <= 10; i++){
-            System.out.println(new Subtract(new Add(new Divide(new Const(3), new Variable("x")), new Multiply(new Const(3), new Variable("x"))), new Const(3)).evaluate(i));
-        }
+        Scanner in = new Scanner(System.in);
+        System.out.println("Write a number: ");
+        float f = in.nextFloat();
+        System.out.print("Answer for x^2-2x+1: ");
+        System.out.println(new Add(new Subtract(new Multiply(new Variable("x"), new Variable("x")), new Multiply(new Const(2), new Variable("x"))), new Const(1)).evaluate(f));
+        in.close();
     }
 }

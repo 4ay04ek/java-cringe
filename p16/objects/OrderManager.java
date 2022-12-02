@@ -3,7 +3,7 @@ package objects;
 import java.util.HashMap;
 
 public class OrderManager {
-    private HashMap<Integer, Order> orders;
+    private HashMap<Integer, Order> orders = new HashMap<>();
     public void add(Order order, int tableNumber) {
         orders.put(tableNumber, order);
     }
@@ -33,4 +33,9 @@ public class OrderManager {
         }
         return r;
     }
+    @Override
+    public String toString() {
+        return "OrderManager [orders=" + orders + "]";
+    }
+    
 }

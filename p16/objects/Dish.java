@@ -1,6 +1,6 @@
 package objects;
 
-public final class Dish {
+public class Dish {
     private double cost;
     private String name, description;
     public void setCost(double cost) {
@@ -21,4 +21,9 @@ public final class Dish {
     public String getDescription() {
         return description;
     }
+    @Override
+    public String toString() {
+        return "\n\t\tDish [cost=" + cost + ", name=" + name + ", description=" + description + "]";
+    }
+    
 }

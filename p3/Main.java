@@ -41,7 +41,5 @@ public class Main{
         System.out.println(sq1.getColor());
         System.out.println(sq1.getSide());
         System.out.println(sq1.getLength());
-
-        
     }
 }

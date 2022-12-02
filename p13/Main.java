@@ -2,7 +2,8 @@ import objects.*;
 
 public class Main{
     public static void main (String args[]){
-        Complex complex = new ConcreteFactory().createComplex(3, 5);
-        System.out.println(complex);
+        ConcreteFactory complex = new ConcreteFactory();
+        System.out.println(complex.createComplex());
+        System.out.println(complex.createComplex(5, 8));
     }
 }

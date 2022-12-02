@@ -1,10 +1,12 @@
 package objects;
 
+import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class Order {
     private int size = 0;
-    private HashMap<Dish, Integer> dishes;
+    private HashMap<Dish, Integer> dishes = new HashMap<>();
     public void add(Dish dish) {
         if (dishes.containsKey(dish)) dishes.put(dish, dishes.get(dish) + 1);
         else dishes.put(dish, 1);
@@ -65,6 +67,19 @@ public class Order {
             dishs[i] = entry.getKey();
             i += 1;
         }
+        Arrays.sort(dishs, new Comparator<Dish>() {
+            @Override
+            public int compare(Dish o1, Dish o2) {
+                int i = 0;
+                if (o1.getCost() < o2.getCost()) i = -1;
+                if (o1.getCost() > o2.getCost()) i = 1;
+                return i;
+            }
+        });
         return dishs;
+    }
+    @Override
+    public String toString() {
+        return "\n\tOrder [size=" + size + ", dishes=" + dishes + "]";
     }
 }

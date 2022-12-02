@@ -12,7 +12,7 @@ public class Main extends JFrame {
 
     Main() {
         super("Image");
-        setSize(400, 600);
+        setSize(500, 600);
         setVisible(true);
         JLabel image = new JLabel() {
             @Override

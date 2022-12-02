@@ -1,10 +1,7 @@
 package objects;
 
-public class DishType1 extends Dish{
-    public DishType1(){
-        super("Farfor", "tarelka", 2.5f);
-    }
+public class DishType1 implements Priceable{
     public int getPrice(){
-        return 10;
+        return 40;
     }
 }

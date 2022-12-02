@@ -1,13 +1,15 @@
 package objects;
 import java.util.HashMap;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class TableOrdersManager implements OrdersManager {
     private HashMap<Integer, Order> orders;
     public void add(Order order, int tableNumber){
-
+        orders.put(tableNumber, order);
     }
     public void addItem(MenuItem item, int tableNumber){
-        
+        orders.get(tableNumber).add(item);
     }
     public Order getOrder(int tableNumber){
         return orders.get(tableNumber);
@@ -61,5 +63,8 @@ public class TableOrdersManager implements OrdersManager {
     public int ordersQuantity() {
         return orders.size();
     }
-    
+    @Override
+    public String toString() {
+        return "TableOrdersManager [orders=" + orders + "]";
+    }
 }

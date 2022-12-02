@@ -1,7 +1,5 @@
 import objects.*;
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
 
 public class Main extends JFrame {
     TextDocument document;

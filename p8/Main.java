@@ -11,7 +11,12 @@ public class Main{
             bwl.add(v);
             uwl.add(v);
         }
+        System.out.println("Was: ");
+        System.out.println(wl);
+        System.out.println(bwl);
+        System.out.println(uwl);
         uwl.moveToBack(wl.remove());
+        System.out.println("\nAfter remove wl[first] from uwl:");
         System.out.println(wl);
         System.out.println(bwl);
         System.out.println(uwl);

@@ -1,12 +1,5 @@
 import objects.*;
-import objects.MenuItem;
-import objects.Drink.drinkTypeEnum;
-
 import javax.swing.*;
-import javax.swing.plaf.ColorUIResource;
-
-import java.awt.*;
-import java.awt.event.*;
 
 public class Main extends JFrame {
     public JLabel it;
